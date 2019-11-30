@@ -42,24 +42,27 @@ hash_passwd = "819b1b95d2cf09b0627ce7ebf461b2e6a711a9cf16a6a30d85e8107e309d47e3"
               "e6b8be33623e6215f663ec8d633bce3f49fbf4c9271ba4c58f3a33489527406d"
 
 try:
-    log_on = input(T + "\n Log On: " + W)
+    log_on = input("\n Log On: ")
     str(log_on)
     sha_512_name = hashlib.sha512(log_on.encode()).hexdigest()
 
-    passwd = getpass.getpass(T + "\n Password: " + W)
+    passwd = getpass.getpass("\n Password: ")
     str(passwd)
     sha_512_passwd = hashlib.sha512(passwd.encode('utf-8')).hexdigest()
 
     if sha_512_name == hash_name:
-        print(G + "Bon Identifiant" + W)
+        print("\n\tIdentifiant: OK")
         if sha_512_passwd == hash_passwd:
-            print(G + "Bon PASSWORD" + W)
+            print("\tPASSWORD: OK\n")
     else:
-        print(R + "Mauvais Identifiant, ou Mot de Passe" + W)
+        print("Mauvais Identifiant, ou Mot de Passe")
 
-    clear()
-    print("Execution du Programme")
+    #clear()
+    print("_" * 50)
+    print("""\n
+        
+        """)
 
 
 except KeyboardInterrupt:
-    print(R + "\nprogramme fermer par l'utilisateur\n" + W)
+    print("\nprogramme fermer par l'utilisateur\n")

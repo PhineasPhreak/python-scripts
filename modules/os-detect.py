@@ -1,4 +1,4 @@
-# !/usr/bin/env python2.7
+# !/usr/bin/env python3.6
 # -*- coding: utf-8 -*-
 
 import platform
@@ -35,20 +35,20 @@ name_node = platform.node()
 
 if name_system == 'linux':
     clean_sys()
-    print name_platform
+    print(name_platform)
 
     # Change boolean value 'True' or 'False' if you want text file
     if False:
-        print '[*] Create File "OS-Linux.txt"'
+        print('[*] Create File "OS-Linux.txt"')
         file_os(file_txt='OS-Linux.txt')
     
 elif name_system == 'windows':
     clean_sys()
-    print name_platform
+    print(name_platform)
 
     if False:
-        print '[*] Create File "OS-Windows.txt"'
+        print('[*] Create File "OS-Windows.txt"')
         file_os(file_txt='OS-Windows.txt')
     
 else:
-    print name_platform
+    print(name_platform)
