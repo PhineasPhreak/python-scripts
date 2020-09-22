@@ -97,3 +97,4 @@ with open(file=file_hash, mode="w", encoding="utf8") as write_file:
             """
 
             sizing(text_size=True)
+
