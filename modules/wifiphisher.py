@@ -521,7 +521,7 @@ def dhcp(dhcpconf, mon_iface):
         return False
     time.sleep(.5) # Give it some time to avoid "SIOCADDRT: Network is unreachable"
     os.system(
-        ('route add -net %s netmask %s gw %s' % 
+        ('route add -net %s netmask %s gw %s' %
         (NETWORK_IP, NETWORK_MASK, NETWORK_GW_IP))
     )
     return True
@@ -908,7 +908,7 @@ if __name__ == "__main__":
 
     if inet_iface and inet_iface in [ap_iface, iface_to_monitor]:
         sys.exit(
-            ('[' + G + '+' + W + 
+            ('[' + G + '+' + W +
             '] Interface %s is connected to the Internet. ' % inet_iface +
             'Please disconnect and rerun the script.\n' +
             '[' + R + '!' + W + '] Closing'
@@ -922,11 +922,11 @@ if __name__ == "__main__":
     '''
     # Set iptable rules and kernel variables.
     os.system(
-        ('iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination %s:%s' 
+        ('iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination %s:%s'
         % (NETWORK_GW_IP, PORT))
     )
     os.system(
-        ('iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination %s:%s' 
+        ('iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination %s:%s'
         % (NETWORK_GW_IP, SSL_PORT))
     )
     Popen(
@@ -950,7 +950,7 @@ if __name__ == "__main__":
     start_ap(ap_iface, channel, essid, args)
     dhcpconf = dhcp_conf(ap_iface)
     if not dhcp(dhcpconf, ap_iface):
-        print('[' + G + '+' + W + 
+        print('[' + G + '+' + W +
             '] Could not set IP address on %s!' % ap_iface)
         shutdown()
     os.system('clear')

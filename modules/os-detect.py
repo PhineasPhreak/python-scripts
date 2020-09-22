@@ -1,4 +1,4 @@
-# !/usr/bin/env python3.6
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import platform
@@ -41,7 +41,7 @@ if name_system == 'linux':
     if False:
         print('[*] Create File "OS-Linux.txt"')
         file_os(file_txt='OS-Linux.txt')
-    
+
 elif name_system == 'windows':
     clean_sys()
     print(name_platform)
@@ -49,6 +49,6 @@ elif name_system == 'windows':
     if False:
         print('[*] Create File "OS-Windows.txt"')
         file_os(file_txt='OS-Windows.txt')
-    
+
 else:
     print(name_platform)

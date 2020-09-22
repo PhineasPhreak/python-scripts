@@ -1,4 +1,4 @@
-# !/usr/bin/env python3.6
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 
@@ -20,10 +20,10 @@ def encrypt(key, filename):
         with open(outputFile, 'wb') as outfile:
             outfile.write(filesize.encode('utf-8'))
             outfile.write(IV)
-            
+
             while True:
                 chunk = infile.read(chunksize)
-                
+
                 if len(chunk) == 0:
                     break
                 elif len(chunk) % 16 != 0:
@@ -35,7 +35,7 @@ def encrypt(key, filename):
 def decrypt(key, filename):
     chunksize = 64*1024
     outputFile = filename[11:]
-    
+
     with open(filename, 'rb') as infile:
         filesize = int(infile.read(16))
         IV = infile.read(16)

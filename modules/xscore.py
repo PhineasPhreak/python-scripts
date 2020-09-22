@@ -1,4 +1,4 @@
-# !/usr/bin/env python3.5
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import os
@@ -60,7 +60,7 @@ try:
     #clear()
     print("_" * 50)
     print("""\n
-        
+
         """)
 
 

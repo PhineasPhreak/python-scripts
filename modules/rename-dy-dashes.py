@@ -1,5 +1,6 @@
-# !/usr/bin/env python3.6
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
 
 import os
 from time import sleep

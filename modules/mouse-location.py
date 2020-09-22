@@ -1,5 +1,6 @@
-# !/usr/bin/env python3.6
+#!/usr/bin/env python3
 # -*- coding: utf8 -*-
+
 
 from pynput.mouse import Listener
 
@@ -16,4 +17,4 @@ def on_scroll(x, y, dx, dy):
 
 with Listener(on_move=on_move, on_click=on_click, on_scroll=on_scroll) as listener:
     listener.join()
-    
+
