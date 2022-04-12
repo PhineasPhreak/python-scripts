@@ -27,3 +27,5 @@ Site for pyinstaller : [Site pyinstaller](http://www.pyinstaller.org/)
 import sys
 sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=32, cols=100))
 ```
+
+**I would like to contribute to this project. Let me know if we could connect.**
